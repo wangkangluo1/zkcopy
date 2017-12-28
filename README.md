@@ -17,11 +17,11 @@ mvn clean install
 java -jar target/zkcopy.jar --source server:port/path --target server:port/path
 ```
 
-With [docker](https://hub.docker.com/r/ksprojects/zkcopy/), use following commands:
+With [docker](https://hub.docker.com/r/wangkangluo1/zkcopy/), use following commands:
 
 ```bash
-docker pull ksprojects/zkcopy
-docker run --rm -it ksprojects/zkcopy --source server:port/path --target server:port/path
+docker pull wangkangluo1/zkcopy
+docker run --rm -it wangkangluo1/zkcopy --source server:port/path --target server:port/path -i false
 ```
 
 ## Options

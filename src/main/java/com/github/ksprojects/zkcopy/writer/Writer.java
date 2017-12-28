@@ -129,6 +129,13 @@ public class Writer implements Watcher {
     }
 
     private void delete(String path) throws KeeperException, InterruptedException {
+        logger.info("delete path " + path);
+
+        if (path.equals("//zookeeper")) {
+            logger.info("ignore delete path " + path);
+            return;
+        }
+
         List<String> children = zk.getChildren(path, false);
         for (String child : children) {
             delete(path + "/" + child);
